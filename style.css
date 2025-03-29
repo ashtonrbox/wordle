@@ -254,3 +254,13 @@
     background-color: white;
     color: #000000;
 }
+
+.remove {
+    background-color: black;
+    color: white;
+    display: none;
+}
+
+.smallbr {
+    height: 11px;
+}
