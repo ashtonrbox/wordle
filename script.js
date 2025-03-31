@@ -787,32 +787,32 @@ function type(key) {
 
                             console.log([locateCell(1, currentCell[1]), locateCell(2, currentCell[1]), locateCell(3, currentCell[1]), locateCell(4, currentCell[1]), locateCell(5, currentCell[1])])
 
-                            setTimeout(() => {
-                                document.getElementById("splash").style.animation = "simpleAppear 1 0.5s ease";
-                                document.getElementById("splash").style.display = "flex";
-                                document.getElementById("finished").style.display = "flex";
-                                document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
+setTimeout(() => {
+    document.getElementById("splash").style.animation = "simpleAppear 1 0.5s ease";
+    document.getElementById("splash").style.display = "flex";
+    document.getElementById("finished").style.display = "flex";
+    document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
 
-                                let url = new URL(document.location).href;
+    let url = new URL(document.location).href;
 
-                                if (url.split("?")[1]) {
-                                    let [key, value] = data.split("=")
+    if (url.split("?")[1]) {
+        let [key, value] = url.split("?")[1].split("=")
 
-                                    if (key === "c") {
+        if (key === "c") {
 
-                                        console.log("Connections data found: " + value)
+            console.log("Connections data found: " + value)
 
-                                        document.querySelectorAll("changeHREF").forEach(href => {
-                                            href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${value}&w=${currentCell[1]}`)
-                                        })
+            document.querySelectorAll(".changeHREF").forEach(href => {
+                href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${value}&w=${currentCell[1]}`)
+            })
 
-                                    }
-                                } else {
-                                    document.querySelectorAll("changeHREF").forEach(href => {
-                                            href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
-                                        }).
-                                }
-                            }, 4500)
+        }
+    } else {
+        document.querySelectorAll(".changeHREF").forEach(href => {
+                href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
+        })
+    }
+}, 4500)
 
                             setTimeout(() => {
                                 cell.style.animation = "winJiggle 1 0.5s ease";
