@@ -791,7 +791,24 @@ function type(key) {
                                 document.getElementById("splash").style.animation = "simpleAppear 1 0.5s ease";
                                 document.getElementById("splash").style.display = "flex";
                                 document.getElementById("finished").style.display = "flex";
-                            }, 4500)
+                                document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
+
+                                let url = new URL(document.location).href;
+
+                                if (url.split("?")[1]) {
+                                    let [key, value] = data.split("=")
+
+                                    if (key === "c") {
+
+                                        console.log("Connections data found: " + value)
+
+                                        document.querySelectorAll("changeHREF").setAttribute("href", `https://ashtonrbox.github.io/hub?c=${value}&w=${currentCell[1]}`)
+
+                                    }
+                                } else {
+                                    document.querySelectorAll("changeHREF").setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
+                                }
+                            })
 
                             setTimeout(() => {
                                 cell.style.animation = "winJiggle 1 0.5s ease";
