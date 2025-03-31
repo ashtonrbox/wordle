@@ -802,13 +802,17 @@ function type(key) {
 
                                         console.log("Connections data found: " + value)
 
-                                        document.querySelectorAll("changeHREF").setAttribute("href", `https://ashtonrbox.github.io/hub?c=${value}&w=${currentCell[1]}`)
+                                        document.querySelectorAll("changeHREF").forEach(href = > {
+                                            href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${value}&w=${currentCell[1]}`)
+                                        })
 
                                     }
                                 } else {
-                                    document.querySelectorAll("changeHREF").setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
+                                    document.querySelectorAll("changeHREF").forEach(href = > {
+                                            href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
+                                        }).
                                 }
-                            })
+                            }, 4500)
 
                             setTimeout(() => {
                                 cell.style.animation = "winJiggle 1 0.5s ease";
