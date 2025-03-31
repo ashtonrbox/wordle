@@ -802,13 +802,13 @@ function type(key) {
 
                                         console.log("Connections data found: " + value)
 
-                                        document.querySelectorAll("changeHREF").forEach(href = > {
+                                        document.querySelectorAll("changeHREF").forEach(href => {
                                             href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${value}&w=${currentCell[1]}`)
                                         })
 
                                     }
                                 } else {
-                                    document.querySelectorAll("changeHREF").forEach(href = > {
+                                    document.querySelectorAll("changeHREF").forEach(href => {
                                             href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
                                         }).
                                 }
