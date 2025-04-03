@@ -809,7 +809,7 @@ setTimeout(() => {
         }
     } else {
         document.querySelectorAll(".changeHREF").forEach(href => {
-                href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${currentCell[1]}`)
+                href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${Number(currentCell[1]) - 1}`)
         })
     }
 }, 4500)
