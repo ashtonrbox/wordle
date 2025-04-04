@@ -797,7 +797,7 @@ setTimeout(() => {
             removeButton.style.display = "block"; 
             removeButton.style.animation = "simpleAppear 1 0.3s ease";  
         }) 
-    }, 200)
+    }, 600)
 
     let url = new URL(document.location).href;
 
