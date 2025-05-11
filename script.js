@@ -708,7 +708,7 @@ words.forEach(word => {
 console.log(secondly.length);
 
 
-let word = "pepsi";
+let word = words[ (Math.floor(Math.random() * words.length) + 1) ];
 
 let currentCell = [1, 1];
 let rollover = false;
